@@ -9,4 +9,5 @@
 ### 3-paths script - counts the number of directories in $PATH
 ### 4-global_variables script - displays environment variables
 ### 5-local_variables script - lists all local and environment  variables and functions
-### 6-create_local_variable script - creates a variable "BEST" with value "School"
+### 6-create_local_variable script - creates a local variable "BEST" with value "School"
+### 7-create_global_variable script - - creates a global variable "BEST" with value "School"
