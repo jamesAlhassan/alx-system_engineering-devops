@@ -8,3 +8,4 @@
 ### 2-path script - adds /action directory to PATH
 ### 3-paths script - counts the number of directories in $PATH
 ### 4-global_variables script - displays environment variables
+### 5-local_variables script - lists all local and environment  variables and functions
