@@ -7,3 +7,4 @@
 ### 1-hello_you script - prints hello USER (current user name)
 ### 2-path script - adds /action directory to PATH
 ### 3-paths script - counts the number of directories in $PATH
+### 4-global_variables script - displays environment variables
