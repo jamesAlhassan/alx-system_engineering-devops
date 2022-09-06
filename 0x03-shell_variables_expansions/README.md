@@ -11,3 +11,4 @@
 ### 5-local_variables script - lists all local and environment  variables and functions
 ### 6-create_local_variable script - creates a local variable "BEST" with value "School"
 ### 7-create_global_variable script - - creates a global variable "BEST" with value "School"
+### 8-true_knowledge script - adds 128 to the env variable " TRUEKNOWLEDGE"
