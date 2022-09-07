@@ -18,3 +18,4 @@
 ### 12-combinations script - prints possible combinations of two lower case lettrs except "oo"
 ### 13-print_float script - prints a number with two decimal places stored in $NUM
 ### 100-decimal_to_hexadecimal script - converts a number from base 10 to base 16 stored in in an env variable "DECIMAL"
+### 101-rot13 script - encodes and decodes text using rot13 encryption.
