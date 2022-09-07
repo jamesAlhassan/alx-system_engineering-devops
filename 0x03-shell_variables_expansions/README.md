@@ -19,3 +19,4 @@
 ### 13-print_float script - prints a number with two decimal places stored in $NUM
 ### 100-decimal_to_hexadecimal script - converts a number from base 10 to base 16 stored in in an env variable "DECIMAL"
 ### 101-rot13 script - encodes and decodes text using rot13 encryption.
+### 102-odd script - prints every other line from input startin with the first line 
