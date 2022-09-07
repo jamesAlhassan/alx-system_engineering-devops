@@ -16,3 +16,4 @@
 ### 10-love_exponent_breath script - env variable "BREATH" exponent env variable "LOVE"
 ### 11-binary_to_decimal script - convert from base 2 to base 10
 ### 12-combinations script - prints possible combinations of two lower case lettrs except "oo"
+### 13-print_float script - prints a number with two decimal places stored in $NUM
