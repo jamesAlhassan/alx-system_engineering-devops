@@ -17,3 +17,4 @@
 ### 11-binary_to_decimal script - convert from base 2 to base 10
 ### 12-combinations script - prints possible combinations of two lower case lettrs except "oo"
 ### 13-print_float script - prints a number with two decimal places stored in $NUM
+### 100-decimal_to_hexadecimal script - converts a number from base 10 to base 16 stored in in an env variable "DECIMAL"
