@@ -36,3 +36,7 @@ And hidden files (starting with .)
 8-firstdelete - Delete the file betty.
 
 The file betty is in /tmp/my_first_directory
+
+9-firstdirdeletion - Delete the directory my_first_directory that is in the /tmp directory.
+
+
