@@ -21,4 +21,4 @@ All your scripts must be executable. To make your file executable, use the chmod
 
 3-listfiles - Display current directory contents in a long format
 
- 
+4-listmorefiles - Display current directory contents, including hidden files (starting with .). Use the long format. 
