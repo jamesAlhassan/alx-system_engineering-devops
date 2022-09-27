@@ -17,4 +17,6 @@ All your scripts must be executable. To make your file executable, use the chmod
 
 1-listit - a that displays the contents list of your current directory.
 
+2-bring_me_home - a script that changes the working directory to the user’s home directory.
+
  
