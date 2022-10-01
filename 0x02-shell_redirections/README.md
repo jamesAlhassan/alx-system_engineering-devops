@@ -33,6 +33,7 @@ You are not allowed to use backticks, &&, || or ;
 All your files must be executable
 You are not allowed to use sed or awk
 
+0-hello_world - a script that prints “Hello, World”, followed by a new line to the standard output.
 
 1-confused_smiley - a script that displays a confused smiley "(Ôo)'.
 
