@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Display 'Best School' 10x using 'untill'
+
+i=1
+
+untill [ $i -gt 10 ]
+do
+	echo "Best School"
+	((i++))
+done
