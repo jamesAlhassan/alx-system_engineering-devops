@@ -8,10 +8,10 @@ then
 	then
 		echo "school file is not empty"
 	else
-	echo "school file is empty"
+		echo "school file is empty"
 	fi
 
-	if [ -f "school"]
+	if [ -f "school" ]
 	then
 		echo "school is a regular file"
 	fi
