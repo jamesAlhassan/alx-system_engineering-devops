@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Displays the contents of current dir in a list format showing only the name of the file after '-'
+
+lst=$(ls)
+
+for ind in $lst;
+do
+	echo "$ind" | cut -d '-' -f2
+done
