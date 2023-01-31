@@ -70,3 +70,10 @@ You cannot use ps
 Requirements:
 
 In between each iteration of the loop, add a sleep 2
+
+5-dont_stop_me_now - Write a Bash script that stops 4-to_infinity_and_beyond process.
+
+Requirements:
+
+You must use kill
+Terminal #0
