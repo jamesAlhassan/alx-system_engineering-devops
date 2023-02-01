@@ -31,3 +31,9 @@ A README.md file, at the root of the folder of the project, is mandatory
 All your Bash script files must be executable
 The first line of all your Bash scripts should be exactly #!/usr/bin/env ruby
 All your regex must be built for the Oniguruma library
+
+0-simply_match_school.rb - equirements:
+
+The regular expression must match School
+Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
+
