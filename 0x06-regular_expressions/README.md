@@ -39,3 +39,6 @@ Using the project instructions, create a Ruby script that accepts one argument a
 
 1-repetition_token_0.rb - Find the regular expression that will match the above cases
 Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
+
+2-repetition_token_1.rb - Find the regular expression that will match the above cases
+Using the project instructions, create a Ruby script that accepts one argument and pass it to a regular expression matching method
