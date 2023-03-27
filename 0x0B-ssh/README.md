@@ -1,4 +1,6 @@
-<span style="color:white;">DevOps</span>
+<span style="color:green;font-weight:700;font-size:20px">
+    markdown color font styles
+</span>
 # 0x0B-ssh
 
 ## Learning Objectives
