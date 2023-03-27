@@ -1,4 +1,4 @@
-<span style="color:white; background:red">DevOps</span>
+<span style="color:white; background:red;">DevOps</span>
 # 0x0B-ssh
 
 ## Learning Objectives
