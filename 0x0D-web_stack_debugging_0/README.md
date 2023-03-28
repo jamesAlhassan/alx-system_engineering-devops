@@ -1,5 +1,8 @@
 # 0x0D-web_stack_debugging_0
-##DEVOPS	## SysADmin	## SCRIPTING	## DEBUGGING
+##DEVOPS
+## SysADmin
+## SCRIPTING
+## DEBUGGING
 
 ## Requirements
 ## General
