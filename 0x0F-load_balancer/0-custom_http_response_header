@@ -4,24 +4,34 @@
 #"X-Served-B"y. The value of the custom HTTP header must be the 
 #hostname of the server Nginx is running on
 
+#Update package repo
 sudo apt-get update
+
+#install nginx
 sudo apt-get -y install nginx
 
+# Firewall permission
 sudo ufw allow 'Nginx HTTP'
+
 
 sudo mkdir -p /var/www/html
 
+#RWX permissions
 sudo chmod -R 755 /var/www
 
+# defauld render page
 echo 'Hello World!' |sudo tee  /var/www/html/index.html
 
+#default error page
 echo "Ceci n'est pas une page" |sudo tee /var/www/html/404.html
 
+#redirection with rewrite cmd
 string_for_replacement="server_name _;\n\tadd_header X-Served-By \$hostname;\n\trewrite ^\/redirect_me https:\/\/www.github\/jamesAlhassan.com permanent;"
 sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 
+#page not found/ error configure
 string_for_replacement="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
 sudo sed -i "s/listen 80 default_server;/$string_for_replacement/" /etc/nginx/sites-enabled/default
 
+#restart nginx
 sudo service nginx restart
-sudo apt-get update
