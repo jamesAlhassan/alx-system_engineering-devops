@@ -2,4 +2,4 @@
 #Replace port no. "8080" w/ "80" in config file within sites-enabled
 sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
 sudo service nginx restart
-pkill nginx
+pkill -o nginx
