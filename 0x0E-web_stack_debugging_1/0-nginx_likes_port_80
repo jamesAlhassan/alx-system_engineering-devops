@@ -7,5 +7,5 @@ ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 #Verify "default.conf is enabled
 ls -l /etc/nginx/sites-enabled
 
-#Reload the nginx server
-sudo nginx -s reload
+#Restart the nginx server
+sudo service nginx restart
