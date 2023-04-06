@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 #Port 80 debugging on nginx
-#restart the nginx server
 
-sudo service nginx restart
+#Enable "default.conf" in sites-enabled using  symlink
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+
+#Verify "default.conf is enabled
+ls -l /etc/nginx/sites-enabled
+
+#reload the nginx server
+sudo nginx -s reload
