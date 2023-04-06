@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#Port 80 debugging on nginx
+#restart the nginx server
+
+sudo service nginx restart
