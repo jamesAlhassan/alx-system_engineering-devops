@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#Add the subdomain www to your domain, point it to your lb-01 IP
+#Add the subdomain lb-01 to your domain, point it to your lb-01 IP
+#Add the subdomain web-01 to your domain, point it to your web-01 IP
+#Add the subdomain web-02 to your domain, point it to your web-02 IP
+
+domain=$1
+
+if [ "$#" -eq 2 ]; then
+    subdomain=$2
+else
+    subdomain=("www" "lb-01" "web-01" "web-02")
+fi
+
+for sub in "${subdomain[@]}"; do
+    echo -n "The subdomain $sub"
+    dig "$sub.$domain" | grep -A1 'ANSWER SECTION:' | tail -n -1 | awk '{ print " is a " $4 " record and points to " $5}'
+done
