@@ -34,16 +34,16 @@ defaults
 	errorfile 504 /etc/haproxy/errors/504.http
 
 ## Load balance
-frontend dema-http
+frontend dema-frontend-http
     bind *:80
     mode http
     http-request set-header X-Forwarded-Proto http
     default_backend dema-backend
 
-frontend dema-https
-    bind *:443 ssl crt /etc/haproxy/certs/www.azindodev.tech.pem
+frontend dema-frontend-https
+    bind *:443 ssl crt /etc/haproxy/certs/www.jamesalhassan.tech.pem
     http-request set-header X-Forwarded-Proto https
-    default_backend azindotech-backend
+    default_backend dema-backend
 
 backend dema-backend
     balance roundrobin
