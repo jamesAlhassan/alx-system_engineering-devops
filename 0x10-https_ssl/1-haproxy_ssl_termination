@@ -33,19 +33,18 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  jamesalhassan-frontend-http
+frontend  dema-front-http
         bind *:80
         mode http
 	http-request set-header X-Forwarded-Proto http
-        default_backend jamesalhassan-backend
+	default_backend dema-back
 
-frontend jamesalhassan-frontend-https
+frontend   dema-front-https
 	bind *:443 ssl crt /etc/haproxy/certs/www.jamesalhassan.tech.pem
 	http-request set-header X-Forwarded-Proto https
-	default_backend jamesalhassan-backend
+	default_backend dema-back
 
-backend jamesalhassan-backend
+backend dema-back
         balance roundrobin
-        server 104481-web-01 100.25.22.118:80 check
-        server 104481-web-02 52.90.13.68:80 check
-
+	server 104481-web-01    100.25.22.118:80 check
+        server 104481-web-02    52.90.13.68:80 check
