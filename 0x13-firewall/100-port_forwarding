@@ -1,10 +1,18 @@
-
-# Adding this line to forward all requests from port 8080 to port 80
+#
+# rules.before
+#
+# Rules that should be run before the ufw command line added rules. Custom
+# rules should be added to one of these chains:
+#   ufw-before-input
+#   ufw-before-output
+#   ufw-before-forward
+#
+# custom port forwarding 18-04-2023 redirect from 8080 to 80
 *nat
 :PREROUTING ACCEPT [0:0]
 -A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
 COMMIT
-# end of my additions
+# end redirect
 
 # Don't delete these required lines, otherwise there will be errors
 *filter
