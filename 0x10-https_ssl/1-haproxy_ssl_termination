@@ -7,6 +7,8 @@ global
 	user haproxy
 	group haproxy
 	daemon
+	maxconn 2048
+	tune.ssl.default-dh-param 2048
 
 	# Default SSL material locations
 	ca-base /etc/ssl/certs
@@ -22,6 +24,8 @@ defaults
 	mode	http
 	option	httplog
 	option	dontlognull
+	option forwardfor
+   	option http-server-close
         timeout connect 5000
         timeout client  50000
         timeout server  50000
@@ -33,18 +37,18 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  dema-frontend-http
-        bind *:80
-        mode http
-	http-request set-header X-Forwarded-Proto http
-	default_backend dema-backend
+frontend dema-frontend-http
+    bind *:80
+    mode http
+    http-request set-header X-Forwarded-Proto http
+    default_backend dema-backend    
 
-frontend   dema-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.jamesalhassan1.tech.pem
-	http-request set-header X-Forwarded-Proto https
-	default_backend dema-backend
+frontend dema-frontend-https
+    bind *:443 ssl crt /etc/haproxy/certs/jamesalhassan1.tech.pem
+    http-request set-header X-Forwarded-Proto https
+    default_backend dema-backend    
 
 backend dema-backend
-        balance roundrobin
-	server 104481-web-01    100.25.22.118:80 check
-        server 104481-web-02    52.90.13.68:80 check
+    balance roundrobin
+    server 104481-web-01 100.25.22.118:80 check
+    server 104481-web-02 52.90.13.68:80 check
