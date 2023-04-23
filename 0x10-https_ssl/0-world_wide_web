@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# the subdomain www points to your load-balancer IP (lb-01)
+# displays info about subdomains
 
 dns_config() {
 	script=$(dig "$2"."$1" | grep -A1 'ANSWER SECTION:' | tr '\t' '\n' | tail -2 | tr '\n' ' ')
