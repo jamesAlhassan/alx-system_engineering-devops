@@ -29,4 +29,4 @@ if __name__ == '__main__':
           .format(employeeName, done, len(tasks)))
 
     for task in compTasks:
-        print(f"\t {task['title']}")
+        print("\t {}".format(task['title']))
