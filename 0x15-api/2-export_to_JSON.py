@@ -2,9 +2,9 @@
 '''GET request for employee's  TODO list progress
 export results to json'''
 
+import json
 import requests
 import sys
-import json
 
 
 if __name__ == '__main__':
