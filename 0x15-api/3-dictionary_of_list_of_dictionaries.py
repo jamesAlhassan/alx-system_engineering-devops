@@ -6,30 +6,26 @@ import json
 import requests
 
 
-if __name__ == "__main__":
-
+if __name__ == '__main__':
     url = "https://jsonplaceholder.typicode.com/users"
 
-    emps = requests.get(url).json()
+    response = requests.get(url)
+    users = response.json()
 
     dictionary = {}
-    for emp in emps:
-        emp_id = emp['id']
-        username = emp['username']
-
-        todos = requests.get("{}/{}/todos".format(url, emp_id))
-        todos_res = todos.json()
-
-        dictionary[emp_id] = []
-        tasks = []
-        for todo in todos:
-            tasks.append({
-                "username": username,
-                "task": todo["title"],
-                "completed": todo["completed"]
+    for user in users:
+        user_id = user['id']
+        username = user['username']
+        url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
+        url = url + '/todos/'
+        response = requests.get(url)
+        tasks = response.json()
+        dictionary[user_id] = []
+        for task in tasks:
+            dictionary[user_id].append({
+                "task": task['title'],
+                "completed": task['completed'],
+                "username": username
             })
-            dictionary[emp_id] = tasks
-
-    with open("todo_all_employees.json".format(emp_id), "w") as f:
-
-        json.dump(dictionary, f)
+    with open('todo_all_employees.json', 'w') as file:
+        json.dump(dictionary, file)
