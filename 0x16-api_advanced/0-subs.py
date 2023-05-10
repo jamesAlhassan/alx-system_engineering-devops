@@ -8,7 +8,7 @@ import requests
 
 def number_of_subscribers(subreddit):
     """
-    Number of subscribers (not active users, total subscribers) for a given subreddit from the Reddit API
+    Number of subscribers for a given subreddit from the Reddit API
     """
 
     if subreddit is None or not isinstance(subreddit, str):
