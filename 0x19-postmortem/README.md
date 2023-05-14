@@ -1,5 +1,5 @@
 # 0x19. Postmortem
-<img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fglobal.discourse-cdn.com%2Fcloudflare%2Foriginal%2F2X%2Fe%2Fe86fee28b56104f676114df33d7b53f82d1831df.jpeg&tbnid=RW28aBE3spRbpM&vet=12ahUKEwjz19-SsPX-AhWBpicCHbD1AyYQMyhFegUIARCPAQ..i&imgrefurl=https%3A%2F%2Fcommunity.cloudflare.com%2Ft%2Fviewen-server-521-web-server-down%2F38109&docid=dAh31wXdu9u82M&w=480&h=360&q=server%20down%20image&ved=2ahUKEwjz19-SsPX-AhWBpicCHbD1AyYQMyhFegUIARCPAQ" alt="error 500" width="1000" height="400">
+<img src="https://ginbits.com/wp-content/uploads/2021/08/How-to-Fix-500-Internal-Server-Error.png" alt="error 500" width="1000" height="400">
 
 ## Issue Summary:
 On the 1st May, 2023 from 8:03 AM to 8:25 AM GMT, requests to webservers for content resulted in HTTP Status Code 503 - Service Unavailable. As a result, users were not able to access web services provided by those servers successfully.
