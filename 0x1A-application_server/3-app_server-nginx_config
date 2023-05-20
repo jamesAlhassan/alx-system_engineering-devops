@@ -1,0 +1,36 @@
+server {
+           listen 80 default_server;
+           listen [::]:80 default_server;
+   
+           error_page 404 /404.html;
+           location = /404.html {
+                   root /var/www/html;
+                   internal;
+           }
+  
+          root /var/www/html;
+  
+          # Add index.php to the list if you are using PHP
+          index index.html index.htm index.nginx-debian.html;
+   
+          server_name _;
+          rewrite ^/redirect_me https://github.com/jamesAlhassan permanent;
+  
+          # Added on 19-05-2023
+          location /airbnb-onepage/ {
+                  proxy_pass http://localhost:5000;
+          }       
+          
+          location /airbnb-dynamic/ {
+                  proxy_pass http://localhost:5001;
+          }
+  
+          location / {
+                  # serves request uri, if not available the 404
+                  try_files $uri $uri/ =404;
+          }
+          
+          
+          # my additions 
+          add_header X-Served-By $HOSTNAME;
+  }       
